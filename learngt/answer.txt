@@ -1,0 +1,235 @@
+#include<stdio.h>
+
+
+char max(char a,char b)
+{
+    if(a>b) return a;
+
+    return b;
+
+}
+
+
+char min(char a,char b)
+{
+    if(a<b) return a;
+
+    return b;
+
+}
+
+char mins(char a,char b,char c,char d,char e,char f,char g,char h,char i,char j)
+{	char x,zxc[10]={a,b,c,d,e,f,g,h,i,j },sb[4]={0,0,0,0},z,p,v;
+		for(x=0;x<10;x++)
+		{
+			switch(zxc[x])
+			{	
+				case 1:
+					sb[0]++;
+					continue;
+				case 2:
+					sb[1]++;
+					continue;
+				case 3:
+					sb[2]++;
+					continue;
+				case 4:
+					sb[3]++;
+					continue;
+				default:
+					continue;
+			}
+		}
+	
+		z=min(sb[0],sb[1]);
+		p=min(sb[2],sb[3]);
+		v=min(z,p);
+		for(x=0;x<4;x++)
+		{
+		if(sb[x]==v)
+			return x+1;
+		}
+}
+
+
+char minss(char a,char b,char c,char d,char e,char f,char g,char h,char i,char j)
+{	char x,zxc[10]={a,b,c,d,e,f,g,h,i,j },sb[4]={0,0,0,0},z,p,v;
+		for(x=0;x<10;x++)
+		{
+			switch(zxc[x])
+			{	
+				case 1:
+					sb[0]++;
+					continue;
+				case 2:
+					sb[1]++;
+					continue;
+				case 3:
+					sb[2]++;
+					continue;
+				case 4:
+					sb[3]++;
+					continue;
+				default:
+					continue;
+			}
+		}
+	
+		z=min(sb[0],sb[1]);
+		p=min(sb[2],sb[3]);
+		v=min(z,p);
+			return v;
+
+}
+char maxs(char a,char b,char c,char d,char e,char f,char g,char h,char i,char j)
+{	char x,zxc[10]={a,b,c,d,e,f,g,h,i,j },sb[4]={0,0,0,0},z,p,v;
+		for(x=0;x<10;x++)
+		{
+			switch(zxc[x])
+			{	
+				case 1:
+					sb[0]++;
+					continue;
+				case 2:
+					sb[1]++;
+					continue;
+				case 3:
+					sb[2]++;
+					continue;
+				case 4:
+					sb[3]++;
+					continue;
+				default:
+					continue;
+			}
+		}
+	
+		z=max(sb[0],sb[1]);
+		p=max(sb[2],sb[3]);
+		v=max(z,p);
+		for(x=0;x<4;x++)
+		{
+		if(sb[x]==v)
+			return x+1;
+		}
+}
+char maxss(char a,char b,char c,char d,char e,char f,char g,char h,char i,char j)
+{	char x,zxc[10]={a,b,c,d,e,f,g,h,i,j },sb[4]={0,0,0,0},z,p,v;
+		for(x=0;x<10;x++)
+		{
+			switch(zxc[x])
+			{	
+				case 1:
+					sb[0]++;
+					continue;
+				case 2:
+					sb[1]++;
+					continue;
+				case 3:
+					sb[2]++;
+					continue;
+				case 4:
+					sb[3]++;
+					continue;
+				default:
+					continue;
+			}
+		}
+	
+		z=max(sb[0],sb[1]);
+		p=max(sb[2],sb[3]);
+		v=max(z,p);
+			return v;
+
+}
+main ()
+{	
+	char a,b,c,d,e,f,g,h,i,j,l;
+	char cxz[10];
+		for(a=1;a<5;a++)
+		{		for(b=1;b<5;b++)
+		{		for(c=1;c<5;c++)
+		{		for(d=1;d<5;d++)
+		{		for(e=1;e<5;e++)
+		{		for(f=1;f<5;f++)
+		{		for(g=1;g<5;g++)
+		{		for(h=1;h<5;h++)
+		{		for(i=1;i<5;i++)
+		{		for(j=1;j<5;j++)
+		{
+					if(
+								( (b==1&&e==3)||(b==2&&e==4)||(b==3&&e==1)||(b==4&&e==2) )                                                          //第二题
+								&&
+								( (c==1&&f==b&&b==d&&f!=c)||(c==2&&c==b&&b==d&&f!=c)||(c==3&&c==f&&f==d&&b!=c)||(c==4&&c==b&&c==f&&d!=c) )          //第三题
+								&&
+								( (d==1&&a==e)||(d==2&&b==g)||(d==3&&a==i)||(d==4&&f==j) )                                                          //第四题
+								&&
+								( (e==1&&h==1)||(e==2&&d==2)||(e==3&&i==3)||(e==4&&g==4) )                                                          //第五题
+								&&
+								( (f==1&&b==h&&h==d)||(f==2&&h==a&&h==f)||(f==3&&h==c&&h==j)||(f==4&&h==e&&h==i) )                                  //第六题
+								&&
+								(   (g==1&&mins(a,b,c,d,e,f,g,h,i,j)==3)
+									||
+									(g==2&&mins(a,b,c,d,e,f,g,h,i,j)==2)
+									||
+									(g==3&&mins(a,b,c,d,e,f,g,h,i,j)==1)
+									||
+									(g==4&&mins(a,b,c,d,e,f,g,h,i,j)==4)
+								)                                                                                                                   //第七题
+								&&
+								( (h==1&&g!=(a+1)&&g!=(a-1))||(h==2&&e!=(a+1)&&e!=(a-1))||(h==3&&b!=(a+1)&&b!=(a-1))||(h==4&&j!=(a+1)&&j!=(a-1)) )  //第八题
+								&&
+								( ((i==1)&&((a==f)||(e==f))&&(!((a==f)&&(e==f))))
+								  ||
+                                  ((i==2)&&((a==j)||(e==j))&&(!((a==j)&&(e==j))))
+								  ||
+								  ((i==3)&&((a==b)||(e==b))&&(!((a==b)&&(e==b))))
+								  ||
+								  ((i==4)&&((a==i)||(e==i))&&(!((a==i)&&(e==i))))             
+								)																													//第九题
+								&&
+								( (maxss(a,b,c,d,e,f,g,h,i,j)-minss(a,b,c,d,e,f,g,h,i,j)==3)&&(j==1)
+								  ||
+								  (maxss(a,b,c,d,e,f,g,h,i,j)-minss(a,b,c,d,e,f,g,h,i,j)==2)&&(j==2)
+								  ||
+								  (maxss(a,b,c,d,e,f,g,h,i,j)-minss(a,b,c,d,e,f,g,h,i,j)==4)&&(j==3)
+								  ||
+								  (maxss(a,b,c,d,e,f,g,h,i,j)-minss(a,b,c,d,e,f,g,h,i,j)==1)&&(j==4)
+								)																													//第十题
+						      )
+
+					{   l=1;
+					break;}
+							
+	} if(l==1)
+		break;} if(l==1)
+		break;} if(l==1)
+		break;} if(l==1)
+		break;} if(l==1)
+		break;} if(l==1)
+		break;} if(l==1)
+		break;} if(l==1)
+		break;} if(l==1)
+		break;}
+
+ cxz[0]=a;
+ cxz[1]=b;
+ cxz[2]=c;
+ cxz[3]=d;
+ cxz[4]=e;
+ cxz[5]=f;
+ cxz[6]=g;
+ cxz[7]=h;
+ cxz[8]=i;
+ cxz[9]=j;
+ 
+
+for(l=0;l<10;l++)
+{
+	
+printf("%c",cxz[l]+'@');
+
+}								
+printf("\n");
+								  
+}
